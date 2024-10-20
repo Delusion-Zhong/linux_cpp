@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
 #include <unistd.h>
 #include <cstring>
 #include <arpa/inet.h>
@@ -40,7 +39,7 @@ int main()
         close(fd);
         return -1;
     }
-
+    cout << "等待客户端连接............" << endl;
     // 阻塞并等待客户端连接
     struct sockaddr_in caddr;
     socklen_t addrlen = sizeof(caddr);
